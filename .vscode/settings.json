@@ -1,0 +1,6 @@
+{
+    "prettier.proseWrap": "never",
+    "editor.tabSize": 2,
+    "editor.foldingStrategy": "indentation",
+    "editor.formatOnSave": true
+}
