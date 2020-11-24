@@ -46,8 +46,14 @@ class Board extends React.Component {
 	render() {
 		const winner = calculateWinner(this.state.squares);
 		let status;
+		let isOver = true;
+		this.state.squares.forEach(item => {
+			!item && (isOver = false);
+		});
 		if (winner) {
 			status = 'Winner:' + winner;
+		} else if (isOver) {
+			status = 'Game Over! 旗鼓相当的对手！';
 		} else {
 			status = 'Next Player:' + (this.state.xIsNext ? 'X' : 'O');
 		}
